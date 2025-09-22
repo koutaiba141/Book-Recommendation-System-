@@ -38,9 +38,9 @@ else:
     db_books = Chroma.from_documents(
         documents,
         embedding=embedding,
-        persist_directory=PERSIST_DIR
+        persist_directory=PERSIST_DIR,
+        collection_name="books"
     )
-    db_books.persist()
     print("✅ Saved Chroma DB for future runs")
 
 # --- Recommendation Logic ---
